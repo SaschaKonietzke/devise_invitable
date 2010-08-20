@@ -1,4 +1,7 @@
-class Devise::InvitationsController < ApplicationController
+require 'cms/base_controller'
+require 'cms/logged_out_controller'
+
+class Devise::InvitationsController < Cms::LoggedOutController
   include Devise::Controllers::InternalHelpers
   include DeviseInvitable::Controllers::Helpers
   
